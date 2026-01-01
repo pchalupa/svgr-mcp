@@ -7,7 +7,7 @@ import { convertSvgToReact } from "./svgr.js";
 
 const server = new McpServer({
   name: "svgr-mcp",
-  version: "1.0.3",
+  version: "1.1.0",
 });
 
 server.registerTool(
@@ -106,6 +106,31 @@ server.registerTool(
       };
     }
   }
+);
+
+server.registerPrompt(
+  "svg_to_react_native",
+  {
+    title: "SVG to React Native Component",
+    description:
+      "Convert SVG to React Native component with TypeScript and named export",
+    argsSchema: {
+      svg: z
+        .string()
+        .describe("SVG content as string or file path to SVG file"),
+    },
+  },
+  ({ svg }) => ({
+    messages: [
+      {
+        role: "user",
+        content: {
+          type: "text",
+          text: `Convert this SVG to a React Native component with TypeScript and named export:\n\nSVG: ${svg}\n\nUse the convert_svg_to_react tool with these options:\n- native: true\n- typescript: true\n- jsxRuntime: automatic`,
+        },
+      },
+    ],
+  })
 );
 
 async function main() {
