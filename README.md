@@ -8,39 +8,17 @@ A Model Context Protocol (MCP) server that exposes [SVGR](https://react-svgr.com
 - **Configurable Output**: Supports extensive SVGR configuration options including TypeScript generation, React Native support, and Prettier formatting.
 - **Optimization**: Optional SVGO integration for optimizing SVG content before conversion.
 
-## Installation
-
-### Prerequisites
-
-- Node.js (v20 or higher)
-- pnpm
-
-### Build
-
-1. Clone the repository.
-2. Install dependencies and build the project:
-
-```bash
-pnpm install
-pnpm run build
-```
-
-## Configuration
-
-To use this server with Claude Desktop, add the following configuration to your `claude_desktop_config.json`:
-
 ```json
 {
   "mcpServers": {
     "svgr": {
-      "command": "node",
-      "args": ["/absolute/path/to/svgr-mcp/build/index.js"]
+      "command": "npx",
+      "args": ["svgr-mcp@latest"],
+      "type": "stdio"
     }
   }
 }
 ```
-
-_Note: Replace `/absolute/path/to/svgr-mcp` with the actual path to your local repository._
 
 ## API Reference
 
@@ -96,14 +74,4 @@ Returns a text content block containing the generated React component code.
     }
   }
 }
-```
-
-## Development
-
-```bash
-# Build the project
-pnpm run build
-
-# Debug with MCP inspector
-pnpm run debug
 ```
