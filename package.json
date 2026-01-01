@@ -27,14 +27,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --clean --format esm --target node20",
+    "build": "tsup",
     "inspect": "pnpm dlx @modelcontextprotocol/inspector node dist/index.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write src/**/*.ts",
     "format:check": "prettier --check src/**/*.ts",
     "ts:check": "tsc --noEmit",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "tsup"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.25.1",
