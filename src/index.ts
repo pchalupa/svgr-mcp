@@ -49,7 +49,7 @@ server.registerTool(
             .optional()
             .describe("Format output with Prettier"),
           prettierConfig: z
-            .record(z.unknown())
+            .record(z.string(), z.unknown())
             .optional()
             .describe("Specify Prettier config"),
           svgo: z
@@ -62,11 +62,11 @@ server.registerTool(
             .optional()
             .describe("Wrap component with React.memo"),
           replaceAttrValues: z
-            .record(z.string())
+            .record(z.string(), z.string())
             .optional()
             .describe("Replace an attribute value by another"),
           svgProps: z
-            .record(z.string())
+            .record(z.string(), z.string())
             .optional()
             .describe("Add props to the root SVG tag"),
           titleProp: z.boolean().optional().describe("Add title prop support"),
