@@ -19,16 +19,16 @@
   },
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "bin": {
-    "svgr-mcp": "./dist/index.js"
+    "svgr-mcp": "./dist/index.cjs"
   },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsup",
-    "inspect": "pnpm dlx @modelcontextprotocol/inspector node dist/index.js",
+    "inspect": "pnpm dlx @modelcontextprotocol/inspector node dist/index.cjs",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write src/**/*.ts",

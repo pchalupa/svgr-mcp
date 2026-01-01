@@ -4,7 +4,7 @@ export default defineConfig({
   entry: {
     index: "src/index.ts",
   },
-  format: ["esm"],
+  format: ["cjs"],
   target: "node20",
   clean: true,
   minify: true,
