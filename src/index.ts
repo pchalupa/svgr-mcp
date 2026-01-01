@@ -7,7 +7,7 @@ import { convertSvgToReact } from "./svgr.js";
 
 const server = new McpServer({
   name: "svgr-mcp",
-  version: "1.0.2",
+  version: "1.0.3",
 });
 
 server.registerTool(
