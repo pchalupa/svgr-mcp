@@ -10,6 +10,13 @@
     "converter"
   ],
   "author": "pchalupa <chalupa.petr93@gmail.com> (https://github.com/pchalupa)",
+  "homepage": "https://github.com/pchalupa/svgr-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/pchalupa/svgr-mcp/issues"
+  },
+  "repository": {
+    "url": "https://github.com/pchalupa/svgr-mcp"
+  },
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
