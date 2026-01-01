@@ -9,33 +9,33 @@
     "react",
     "converter"
   ],
-  "author": "",
+  "author": "pchalupa <chalupa.petr93@gmail.com> (https://github.com/pchalupa)",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "svgr-mcp": "./build/index.js"
+    "svgr-mcp": "./dist/index.js"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --clean --format esm --target node20 --external noExternal",
+    "build": "tsup src/index.ts --clean --format esm --target node20",
     "inspect": "pnpm dlx @modelcontextprotocol/inspector node dist/index.js",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "format": "prettier --write src/**/*.ts",
     "format:check": "prettier --check src/**/*.ts",
-    "typecheck": "tsc --noEmit",
+    "ts:check": "tsc --noEmit",
     "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.25.1",
-    "@svgr/core": "^8.1.0",
-    "@svgr/plugin-jsx": "^8.1.0",
-    "@svgr/plugin-prettier": "^8.1.0",
-    "@svgr/plugin-svgo": "^8.1.0",
-    "zod": "^4.3.4"
+    "@modelcontextprotocol/sdk": "1.25.1",
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@svgr/plugin-prettier": "8.1.0",
+    "@svgr/plugin-svgo": "8.1.0",
+    "zod": "~4.3.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
@@ -45,5 +45,6 @@
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.51.0"
-  }
+  },
+  "packageManager": "pnpm@10.27.0"
 }

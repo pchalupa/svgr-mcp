@@ -9,22 +9,22 @@ importers:
   .:
     dependencies:
       '@modelcontextprotocol/sdk':
-        specifier: ^1.25.1
+        specifier: 1.25.1
         version: 1.25.1(hono@4.11.3)(zod@4.3.4)
       '@svgr/core':
-        specifier: ^8.1.0
+        specifier: 8.1.0
         version: 8.1.0(typescript@5.9.3)
       '@svgr/plugin-jsx':
-        specifier: ^8.1.0
+        specifier: 8.1.0
         version: 8.1.0(@svgr/core@8.1.0(typescript@5.9.3))
       '@svgr/plugin-prettier':
-        specifier: ^8.1.0
+        specifier: 8.1.0
         version: 8.1.0(@svgr/core@8.1.0(typescript@5.9.3))
       '@svgr/plugin-svgo':
-        specifier: ^8.1.0
+        specifier: 8.1.0
         version: 8.1.0(@svgr/core@8.1.0(typescript@5.9.3))(typescript@5.9.3)
       zod:
-        specifier: ^4.3.4
+        specifier: ~4.3.4
         version: 4.3.4
     devDependencies:
       '@eslint/js':
