@@ -111,7 +111,7 @@ server.registerTool(
         ],
       };
     }
-  }
+  },
 );
 
 server.registerPrompt(
@@ -136,7 +136,7 @@ server.registerPrompt(
         },
       },
     ],
-  })
+  }),
 );
 
 async function main() {
