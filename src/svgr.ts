@@ -1,4 +1,4 @@
-import { Config, transform } from "@svgr/core";
+import { type Config, transform } from "@svgr/core";
 
 export async function convertSvgToReact({
   svg,
@@ -27,6 +27,6 @@ export async function convertSvgToReact({
     },
     {
       componentName,
-    }
+    },
   );
 }

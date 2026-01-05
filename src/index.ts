@@ -104,7 +104,9 @@ server.registerTool(
         content: [
           {
             type: "text",
-            text: `Error converting SVG: ${error instanceof Error ? error.message : error}`,
+            text: `Error converting SVG: ${
+              error instanceof Error ? error.message : error
+            }`,
           },
         ],
       };
