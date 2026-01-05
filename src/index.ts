@@ -78,6 +78,10 @@ server.registerTool(
             .enum(["classic", "automatic", "classic-preact"])
             .optional()
             .describe("Specify a JSX runtime to use"),
+          exportType: z
+            .enum(["named", "default"])
+            .optional()
+            .describe("Specify export type (named or default)"),
         })
         .default({})
         .describe("SVGR configuration options"),
