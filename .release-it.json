@@ -1,0 +1,19 @@
+{
+  "git": {
+    "commitMessage": "Release ${version}",
+    "tagName": "${version}",
+    "changelog": "npx -y auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs",
+    "requireCleanWorkingDir": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "${version}"
+  },
+  "npm": {
+    "publish": false
+  },
+  "plugins": {},
+  "hooks": {
+    "after:bump": "npx -y auto-changelog -p"
+  }
+}
