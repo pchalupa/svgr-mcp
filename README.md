@@ -55,6 +55,7 @@ The `options` parameter supports the following keys:
 - **`titleProp`** (`boolean`): Add title prop support.
 - **`descProp`** (`boolean`): Add description prop support.
 - **`jsxRuntime`** (`"classic" | "automatic" | "classic-preact"`): Specify the JSX runtime to use.
+- **`exportType`** (`"named" | "default"`): Specify export type (named or default).
 
 **Return Value:**
 
