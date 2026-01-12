@@ -3,11 +3,12 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
+import manifest from "../package.json";
 import { convertSvgToReact } from "./svgr.js";
 
 const server = new McpServer({
   name: "svgr-mcp",
-  version: "1.2.2",
+  version: manifest.version,
 });
 
 server.registerTool(
