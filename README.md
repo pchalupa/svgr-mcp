@@ -76,3 +76,32 @@ Returns a text content block containing the generated React component code.
   }
 }
 ```
+
+### Prompts
+
+#### `svg_to_react_native`
+
+A convenience prompt that converts SVG to a React Native component with recommended settings.
+
+**Title:** SVG to React Native Component
+
+**Description:** Convert SVG to React Native component with TypeScript and named export
+
+**Arguments:**
+
+| Parameter | Type     | Description                                   |
+| :-------- | :------- | :-------------------------------------------- |
+| `svg`     | `string` | **Required**. SVG content or file path to SVG |
+
+**Preset Options:**
+
+This prompt automatically applies the following options:
+
+- `native: true` - Generates React Native compatible components
+- `typescript: true` - Outputs TypeScript code
+- `jsxRuntime: automatic` - Uses the automatic JSX runtime
+- `exportType: named` - Uses named exports
+
+**Usage:**
+
+This prompt guides the assistant to use the `convert_svg_to_react` tool with React Native-specific configurations, making it easier to generate mobile-ready components without manually specifying all options.
