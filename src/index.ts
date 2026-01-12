@@ -132,7 +132,7 @@ server.registerPrompt(
         role: "user",
         content: {
           type: "text",
-          text: `Convert this SVG to a React Native component with TypeScript and named export:\n\nSVG: ${svg}\n\nUse the convert_svg_to_react tool with these options:\n- native: true\n- typescript: true\n- jsxRuntime: automatic\n- exportType: named`,
+          text: `Convert the following SVG:\n\n${svg}\n\nUse the tool "convert_svg_to_react" with these options:\n- native: true\n- typescript: true\n- jsxRuntime: automatic\n- exportType: named`,
         },
       },
     ],
