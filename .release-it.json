@@ -9,9 +9,7 @@
     "release": true,
     "releaseName": "${version}"
   },
-  "npm": {
-    "publish": false
-  },
+  "npm": {},
   "plugins": {},
   "hooks": {
     "after:bump": "npx -y auto-changelog -p"
